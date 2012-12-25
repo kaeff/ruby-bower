@@ -1,0 +1,3 @@
+module Bower
+  # Your code goes here...
+end
