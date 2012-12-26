@@ -7,9 +7,9 @@ Gem::Specification.new do |gem|
   gem.name          = "ruby-bower"
   gem.version       = Bower::VERSION
   gem.authors       = ["Klaus Fleerkötter"]
-  gem.email         = ["kaeff@gmx.net"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.email         = ["hi@kaeff.net"]
+  gem.description   = %q{A ruby wrapper for Bower}
+  gem.summary       = gem.description
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)

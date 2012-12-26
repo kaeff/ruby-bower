@@ -1,6 +1,6 @@
 # Ruby::Bower
 
-TODO: Write a gem description
+A ruby wrapper for [Bower](https://github.com/twitter/bower).
 
 ## Installation
 
@@ -24,6 +24,8 @@ TODO: Write usage instructions here
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
+3. Spec your changes using RSpec
+4. Commit your changes (`git commit -am 'Add some feature'`)
+5. Push to the branch (`git push origin my-new-feature`)
+6. Test your changes
 5. Create new Pull Request
