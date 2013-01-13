@@ -5,7 +5,7 @@ require 'ruby-bower/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "ruby-bower"
-  gem.version       = Bower::VERSION
+  gem.version       = RubyBower::VERSION
   gem.authors       = ["Klaus Fleerkötter"]
   gem.email         = ["hi@kaeff.net"]
   gem.description   = %q{A ruby wrapper for Bower}
