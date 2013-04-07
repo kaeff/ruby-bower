@@ -1,33 +1,30 @@
 require 'execjs'
 
-module RubyBower
-  class Bower
+class Bower
 
-    class << self
-      def backend
-        @@backend ||= ExecJS::ExternalRuntime.new(
-          :name        => 'Node.js (V8) (customized for module loading)',
-          :command     => ["nodejs", "node"],
-          :runner_path => File.expand_path("../support/node_module_runner.js", __FILE__)
-        )
-      end
+  class << self
+    def backend
+      @@backend ||= ExecJS::ExternalRuntime.new(
+        :name        => 'Node.js (V8) (customized for module loading)',
+        :command     => ["nodejs", "node"],
+        :runner_path => File.expand_path("../support/node_event_emitter_runner.js", __FILE__)
+      )
+    end
 
-      def context
-        @@context ||= backend.compile "bower = require('bower')"
-      end
+    def context
+      @context ||= backend.compile <<-JS
+var bower = require('bower');
+JS
     end
 
     def commands
-      @@context.eval('Object.keys(bower.commands)')
+      [:list]
     end
+  end
 
-    def method_missing(method_name, *arguments, &block)
-      return @@context.call "bower.#{method_name}", arguments if commands.include? method_name
-      super
-    end
-
-    def respond_to?(method_name, include_private = false)
-      commands.include? method_name || super
+  commands.each do |command|
+    define_method command do |*arguments|
+      Bower.context.call "bower.commands.#{command}", *arguments
     end
   end
 end

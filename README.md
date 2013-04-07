@@ -16,9 +16,18 @@ Or install it yourself as:
 
     $ gem install ruby-bower
 
+Bower requires an installation of node.js. You could e.g. use the gem 'therubyracer' as described above.
+
 ## Usage
 
-TODO: Write usage instructions here
+Ruby-bower gives you programmatic access to Bower's API - from Ruby.
+You can pass in objects to commands as regular objects:
+    
+    bower = Bower.new
+    bower.list sources: true
+
+See [the Bower repository](https://github.com/twitter/bower/tree/master/lib/commands) or `$ bower help` for usage information on Bower's commands.
+`Bower.commands` reveals all supported Bower commands. Currently, that's only the `list` command. Further implementations and ideas for this tool are heartily encouraged!
 
 ## Contributing
 

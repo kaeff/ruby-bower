@@ -1,0 +1,16 @@
+{
+  "name": "ruby-bower",
+  "version": "0.0.1",
+  "description": "A ruby wrapper for [Bower](https://github.com/twitter/bower).",
+  "dependencies": {
+    "bower": "~0.8.6",
+    "underscore": "~1.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kaeff/ruby-bower.git"
+  },
+  "author": "Klaus Fleerkötter",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
