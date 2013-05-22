@@ -1,3 +1,7 @@
+[![Gem Version](https://badge.fury.io/rb/ruby-bower.png)](http://badge.fury.io/rb/ruby-bower)
+[![Code Climate](https://codeclimate.com/github/kaeff/ruby-bower.png)](https://codeclimate.com/github/kaeff/ruby-bower)
+[![Dependency Status](http://www.versioneye.com/package/ruby-bower/badge.png)](http://www.versioneye.com/package/ruby-bower)
+
 # Ruby::Bower
 
 A ruby wrapper for [Bower](https://github.com/twitter/bower).
